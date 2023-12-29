@@ -1,0 +1,354 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Enemy
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 2158082466648162304
+  nodes:
+  - rid: 2158082466648162304
+  - rid: 2158082466648162305
+  - rid: 2158082466648162306
+  - rid: 2158082466648162307
+  - rid: 2158082466648162308
+  - rid: 2158082466648162309
+  - rid: 2158082466648162311
+  - rid: 2158082466648162312
+  - rid: 2158082466648162313
+  - rid: 2158082466648162314
+  - rid: 2158082466648162315
+  - rid: 2158082470215680002
+  treeState: 0
+  blackboard:
+    keys:
+    - rid: 2158082466648162318
+    - rid: 2158082466648162320
+    - rid: 2158082466648162321
+    - rid: 2158082466648162322
+    - rid: 2158082466648162323
+    - rid: 2158082466648162324
+    - rid: 2158082466648162325
+    - rid: 2158082466648162326
+    - rid: 2158082466648162327
+    - rid: 2158082466648162328
+    - rid: 2158082470215680000
+    - rid: 2158082470215680001
+  viewPosition: {x: 71.2, y: 77.6, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2158082466648162304
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: bd6c9959-e923-4221-97fe-fcd80e66e675
+        position: {x: 0, y: -105}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 2158082466648162315
+    - rid: 2158082466648162305
+      type: {class: Selector, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: f80d260ee7a53e246bb08c5a2971db28
+        position: {x: 0, y: 120}
+        blackboard:
+          keys: []
+        description: Enemy behaviour selector
+        drawGizmos: 0
+        children:
+        - rid: 2158082466648162306
+        - rid: 2158082466648162307
+        - rid: 2158082466648162308
+    - rid: 2158082466648162306
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: c517f32a7c1ce3c4489e644e228a702e
+        position: {x: -390, y: 300}
+        blackboard:
+          keys: []
+        description: Chase Sequence
+        drawGizmos: 0
+        children:
+        - rid: 2158082466648162309
+        - rid: 2158082470215680002
+    - rid: 2158082466648162307
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: b59b1bcf483a11c44bb70a1a9bc03d3a
+        position: {x: 0, y: 300}
+        blackboard:
+          keys: []
+        description: Attack Sequence
+        drawGizmos: 0
+        children:
+        - rid: 2158082466648162311
+        - rid: 2158082466648162312
+    - rid: 2158082466648162308
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 741ae7526a093f64cb9db1bc16fc44f5
+        position: {x: 375, y: 300}
+        blackboard:
+          keys: []
+        description: Patrol Sequence
+        drawGizmos: 0
+        children:
+        - rid: 2158082466648162313
+        - rid: 2158082466648162314
+    - rid: 2158082466648162309
+      type: {class: EnemyInChaseRange, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 5ff7bbed397d46445bdb7693ece0294f
+        position: {x: -570, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        selfGameObject:
+          reference:
+            rid: 2158082466648162328
+          defaultValue: {fileID: 0}
+        playerGameObject:
+          reference:
+            rid: 2158082470215680000
+          defaultValue: {fileID: 0}
+        upperrange:
+          reference:
+            rid: 2158082466648162321
+          defaultValue: 0
+        lowerrange:
+          reference:
+            rid: 2158082466648162322
+          defaultValue: 0
+    - rid: 2158082466648162311
+      type: {class: EnemyInAttackRange, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: e6bc25ae88c987849bc25f094a112ba3
+        position: {x: -120, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        selfGameObject:
+          reference:
+            rid: 2158082466648162328
+          defaultValue: {fileID: 0}
+        playerGameObject:
+          reference:
+            rid: 2158082470215680000
+          defaultValue: {fileID: 0}
+        upperrange:
+          reference:
+            rid: 2158082466648162321
+          defaultValue: 0
+        lowerrange:
+          reference:
+            rid: 2158082466648162322
+          defaultValue: 0
+    - rid: 2158082466648162312
+      type: {class: AttackPlayer, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 16d599207c775404eab0a78aedbf30cb
+        position: {x: 90, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        playerGameObject:
+          reference:
+            rid: 2158082470215680000
+          defaultValue: {fileID: 0}
+        selfGameObject:
+          reference:
+            rid: 2158082466648162328
+          defaultValue: {fileID: 0}
+    - rid: 2158082466648162313
+      type: {class: GetNextDestination, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 18abfbfe7c7ba0a409ec23a393be6412
+        position: {x: 270, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        waypointParent:
+          reference:
+            rid: 2158082470215680001
+          defaultValue: {fileID: 0}
+        myTransform:
+          reference:
+            rid: 2158082466648162328
+          defaultValue: {fileID: 0}
+    - rid: 2158082466648162314
+      type: {class: GoToTarget, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 2559b59a53554794eb02f64d62b288bd
+        position: {x: 480, y: 450}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        selfGameObject:
+          reference:
+            rid: 2158082466648162328
+          defaultValue: {fileID: 0}
+        targetObject:
+          reference:
+            rid: 2158082466648162324
+          defaultValue: {fileID: 0}
+    - rid: 2158082466648162315
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: c43c9bb0f39448b448788c7069fb9e04
+        position: {x: 0, y: 0}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 2158082466648162305
+        restartOnSuccess: 1
+        restartOnFailure: 0
+        maxRepeats: 0
+    - rid: 2158082466648162318
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: playerGameobject
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082466648162320
+      type: {class: FloatKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: range
+        typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 5
+    - rid: 2158082466648162321
+      type: {class: FloatKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: upperChaseRange
+        typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 4
+    - rid: 2158082466648162322
+      type: {class: FloatKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: lowerChaseRange
+        typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 1
+    - rid: 2158082466648162323
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: wayPointParent
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082466648162324
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: targetObject
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082466648162325
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: protoTypeRunnerGameObject
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082466648162326
+      type: {class: FloatKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: upperRangeAttack
+        typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 0.9
+    - rid: 2158082466648162327
+      type: {class: FloatKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: lowerRangeAttack
+        typeName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        value: 0.5
+    - rid: 2158082466648162328
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: selfGameObject
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082470215680000
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: playerGameObject
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082470215680001
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: waypointParent
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 2158082470215680002
+      type: {class: chasePlayer, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 44bb438ae08b22f438c2cebb45f40fcb
+        position: {x: -330, y: 570}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        selfGameObject:
+          reference:
+            rid: 2158082466648162328
+          defaultValue: {fileID: 0}
+        playerGameObject:
+          reference:
+            rid: 2158082470215680000
+          defaultValue: {fileID: 0}
+        upperRangeChase:
+          reference:
+            rid: -2
+          defaultValue: 0
+        lowerRangeChase:
+          reference:
+            rid: -2
+          defaultValue: 0
